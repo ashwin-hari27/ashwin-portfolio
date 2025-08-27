@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwin - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 32);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        nav ul li a {
+            color: inherit;
+            /* inherit color from parent (so same as normal text) */
+            text-decoration: none;
+            /* removes underline */
+        }
+
+        nav ul li a:hover {
+            color: rgb(74, 74, 99);
+            font-size: 1.04rem;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .servicesSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .servicesSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: rgb(170, 107, 228);
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgb(18, 18, 62);
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .projectsSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .projectsSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: rgb(170, 107, 228);
+            text-align: center;
+        }
+
+        .project-card {
+            background: rgb(18, 18, 62);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .project-date {
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .tech-stack {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .contactSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contactSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(170, 107, 228);
+        }
+
+        .contactSection p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: rgb(170, 107, 228);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ashwin's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Ashwin</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn" id="resumeBtn">Download Resume</button>
+                    <button class="btn" id="githubBtn">Visit GitHub</button>
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <section id="services" class="servicesSection">
+            <h1>My Services</h1>
+            <div class="services-container">
+                <div class="service-card">
+                    <h2>💻 Web Development</h2>
+                    <p>I build responsive, modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+                </div>
+                <div class="service-card">
+                    <h2>📊 Data Science</h2>
+                    <p>From data analysis to ML models, I extract insights and create intelligent solutions.</p>
+                </div>
+                <div class="service-card">
+                    <h2>☁️ Cloud Engineering</h2>
+                    <p>I design, deploy, and scale cloud-based apps ensuring performance and reliability.</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projectsSection">
+            <h1>My Projects</h1>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>E-commerce Web Application (Frontend)</h2>
+                    <span class="project-date">October 2024</span>
+                </div>
+                <p class="tech-stack"><em>HTML, CSS</em></p>
+                <ul>
+                    <li>Designed and implemented a visually appealing homepage for an e-commerce web-app.</li>
+                    <li>Developed key UI components including navigation bar, search, product grids, banners, and
+                        footer.</li>
+                    <li>Structured codebase with semantic HTML and reusable CSS classes for scalability.</li>
+                    <li>Focused on modern design & intuitive UX to replicate real-world e-commerce standards.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>Video Skeletonizer</h2>
+                    <span class="project-date">March 2024</span>
+                </div>
+                <p class="tech-stack"><em>Python, OpenCV</em></p>
+                <ul>
+                    <li>Developed a Video Skeletonization Program using Python and OpenCV with Matplotlib, NumPy, and
+                        Pandas.</li>
+                    <li>Implemented real-time movement tracking & logic to count pull-up repetitions in video.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>Smart Door</h2>
+                    <span class="project-date">March 2024</span>
+                </div>
+                <p class="tech-stack"><em>Arduino</em></p>
+                <ul>
+                    <li>Built a motion-detecting Smart Door using Arduino UNO and Servo Motor.</li>
+                    <li>Door opens automatically when motion is detected within range.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="contactSection">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to reach out through the details below:</p>
+
+            <div class="contact-info">
+                <p>📧 Email: <a href="mailto:hariharanashwin16@gmail.com">hariharanashwin16@gmail.com</a></p>
+                <p>📱 Phone: +91 7395969216</p>
+                <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/ashwin-hariharan-220375294/"
+                        target="_blank">linkedin.com/in/ashwin-hariharan</a></p>
+                <p>💻 GitHub: <a href="https://github.com/ashwin-hari27" target="_blank">github.com/ashwin-hari27</a>
+                </p>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Data Scientist.', 'Cloud Engineer.'],
+            typeSpeed: 50,
+        });
+        // Smooth scroll for Services link
+        document.querySelector('a[href="#services"]').addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#services").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+        // Smooth scroll for Projects link
+        document.querySelector('a[href="#projects"]').addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#projects").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+        // Smooth scroll for Contact link
+        document.querySelector('a[href="#contact"]').addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#contact").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+        // Resume download functionality
+        document.getElementById("resumeBtn").addEventListener("click", function () {
+            const link = document.createElement("a");
+            link.href = "Ashwin_v3.2.pdf";  // make sure resume.pdf is in same folder as index.html
+            link.download = "Ashwin_Resume.pdf"; // name of the downloaded file
+            link.click();
+        });
+
+        // GitHub visit functionality
+        document.getElementById("githubBtn").addEventListener("click", function () {
+            window.open("https://github.com/ashwin-hari27", "_blank"); // replace with your GitHub URL
+        });
+
+    </script>
+</body>
+
+</html>
